@@ -164,15 +164,25 @@ public class MainClass {
 					}
 				}
 		    }		    
-		}
-		
+		}		
 		fr.close();
-		CreateXML xml = new CreateXML(tokens);		
 	}
 	
 	public static void main(String[] args) throws IOException{
 		
 		MainClass main = new MainClass();
-		
+		EntityComparison e = new EntityComparison();
+		e.CompareEntity(tokens);		
+		for(Token b: e.tFinal){
+			if(b.i > 0){
+				System.out.println("Named Entity  : " + b.nEnt);
+				System.out.println("Token Value   : " + b.tData);			
+				System.out.println("Token Index   : " + b.index);
+				System.out.println("Token Position: " + b.i);
+				System.out.println("------------------------");
+			}
+		}
+		System.out.println();
+		CreateXML xml = new CreateXML(e.tFinal);
 	}
 }

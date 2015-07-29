@@ -37,12 +37,13 @@ public class CreateXML {
 			//Loop through list and create nodes for all elements
 			for(Token i: t){	
 				
-				//Create new token node
+				//Create new token node and add index
 				Element token = doc.createElement("token");
+				token.setAttribute("index", Integer.toString(i.index));
 				NLP.appendChild(token);
 				
 				//Check punctuation flag and set type
-				if(i.p){ poa = "punctuation";  }
+				if(i.puncFlag){ poa = "punctuation";  }
 				else   { poa = "alphanumeric"; }
 				
 				Element type = doc.createElement("type");
@@ -69,7 +70,7 @@ public class CreateXML {
 					eos.setAttribute("id", Integer.toString(sCount));
 					start = false;
 					
-				} else if (!start && i.e){
+				} else if (!start && i.eosFlag){
 					eos.appendChild(doc.createTextNode("last"));
 					eos.setAttribute("id", Integer.toString(sCount));
 					sCount++;
@@ -80,11 +81,18 @@ public class CreateXML {
 					eos.setAttribute("id", Integer.toString(sCount));
 				}
 				
-				token.appendChild(eos);
+				token.appendChild(eos);			
 				
 				//Load token data
 				Element data = doc.createElement("data");
-				data.appendChild(doc.createTextNode(i.s));
+				data.appendChild(doc.createTextNode(i.tData));
+				
+				//If this node matches a named identity, set attributes
+				if(i.i > 0){
+					data.setAttribute("namedentity", "true");
+					data.setAttribute("position", Integer.toString(i.i));
+					data.setAttribute("value", i.nEnt);
+				}				
 				token.appendChild(data);
 				
 			}
