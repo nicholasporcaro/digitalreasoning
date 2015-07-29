@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<NLP>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">first</sentence>
+<data>The</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>term</data>
+</token>
+<token>
+<type>punctuation</type>
+<sentence id="1">middle</sentence>
+<data>"</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>First</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>World</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>War</data>
+</token>
+<token>
+<type>punctuation</type>
+<sentence id="1">middle</sentence>
+<data>"</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>was</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>first</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>used</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>in</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>September</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>1914</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>by</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>the</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>German</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>philosopher</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>Ernst</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>Haeckel</data>
+</token>
+<token>
+<type>punctuation</type>
+<sentence id="1">middle</sentence>
+<data>,</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>who</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>claimed</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>that</data>
+</token>
+<token>
+<type>punctuation</type>
+<sentence id="1">middle</sentence>
+<data>"</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>there</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>is</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>no</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>doubt</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>that</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>the</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>course</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>and</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>character</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>of</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>the</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>feared</data>
+</token>
+<token>
+<type>punctuation</type>
+<sentence id="1">middle</sentence>
+<data>'</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>European</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>War</data>
+</token>
+<token>
+<type>punctuation</type>
+<sentence id="1">middle</sentence>
+<data>'</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>...</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>will</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>become</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>the</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>first</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>world</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>war</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>in</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>the</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>full</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>sense</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>of</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>the</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="1">middle</sentence>
+<data>word</data>
+</token>
+<token>
+<type>punctuation</type>
+<sentence id="1">last</sentence>
+<data>.</data>
+</token>
+<token>
+<type>punctuation</type>
+<sentence id="2">first</sentence>
+<data>"</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>Why</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>did</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>the</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>war</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>begin</data>
+</token>
+<token>
+<type>punctuation</type>
+<sentence id="2">middle</sentence>
+<data>?</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>The</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>immediate</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>trigger</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>for</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>war</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>was</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>the</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>28</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>June</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>1914</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>assassination</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>of</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>Archduke</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>Franz</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>Ferdinand</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>of</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>Austria</data>
+</token>
+<token>
+<type>punctuation</type>
+<sentence id="2">middle</sentence>
+<data>,</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>heir</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>to</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>the</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>throne</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>of</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>Austria-Hungary</data>
+</token>
+<token>
+<type>punctuation</type>
+<sentence id="2">middle</sentence>
+<data>,</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>by</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>Yugoslav</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>nationalist</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>Gavrilo</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>Princip</data>
+</token>
+<token>
+<type>punctuation</type>
+<sentence id="2">middle</sentence>
+<data>(</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>19</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>years</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>old</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>at</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>the</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>time</data>
+</token>
+<token>
+<type>punctuation</type>
+<sentence id="2">middle</sentence>
+<data>)</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>in</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="2">middle</sentence>
+<data>Sarajevo</data>
+</token>
+<token>
+<type>punctuation</type>
+<sentence id="2">last</sentence>
+<data>.</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="3">first</sentence>
+<data>This</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="3">middle</sentence>
+<data>set</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="3">middle</sentence>
+<data>off</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="3">middle</sentence>
+<data>a</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="3">middle</sentence>
+<data>diplomatic</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="3">middle</sentence>
+<data>crisis</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="3">middle</sentence>
+<data>when</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="3">middle</sentence>
+<data>Austria-Hungary</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="3">middle</sentence>
+<data>delivered</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="3">middle</sentence>
+<data>an</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="3">middle</sentence>
+<data>ultimatum</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="3">middle</sentence>
+<data>to</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="3">middle</sentence>
+<data>the</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="3">middle</sentence>
+<data>Kingdom</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="3">middle</sentence>
+<data>of</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="3">middle</sentence>
+<data>Serbia</data>
+</token>
+<token>
+<type>punctuation</type>
+<sentence id="3">middle</sentence>
+<data>,</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="3">middle</sentence>
+<data>and</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="3">middle</sentence>
+<data>entangled</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="3">middle</sentence>
+<data>international</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="3">middle</sentence>
+<data>alliances</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="3">middle</sentence>
+<data>formed</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="3">middle</sentence>
+<data>over</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="3">middle</sentence>
+<data>the</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="3">middle</sentence>
+<data>previous</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="3">middle</sentence>
+<data>decades</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="3">middle</sentence>
+<data>were</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="3">middle</sentence>
+<data>invoked</data>
+</token>
+<token>
+<type>punctuation</type>
+<sentence id="3">last</sentence>
+<data>.</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="4">first</sentence>
+<data>Within</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="4">middle</sentence>
+<data>weeks</data>
+</token>
+<token>
+<type>punctuation</type>
+<sentence id="4">middle</sentence>
+<data>,</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="4">middle</sentence>
+<data>the</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="4">middle</sentence>
+<data>major</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="4">middle</sentence>
+<data>powers</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="4">middle</sentence>
+<data>were</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="4">middle</sentence>
+<data>at</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="4">middle</sentence>
+<data>war</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="4">middle</sentence>
+<data>and</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="4">middle</sentence>
+<data>the</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="4">middle</sentence>
+<data>conflict</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="4">middle</sentence>
+<data>soon</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="4">middle</sentence>
+<data>spread</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="4">middle</sentence>
+<data>around</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="4">middle</sentence>
+<data>the</data>
+</token>
+<token>
+<type>alphanumeric</type>
+<sentence id="4">middle</sentence>
+<data>world</data>
+</token>
+<token>
+<type>punctuation</type>
+<sentence id="4">last</sentence>
+<data>.</data>
+</token>
+</NLP>
