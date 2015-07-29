@@ -1,14 +1,16 @@
 package main.java;
 import java.io.*;
 import java.util.*;
+import java.util.concurrent.Callable;
 import java.util.regex.*;
 
-public class MainClass {
+public class Tokenizer implements Callable<List<Token>> {
 	
-	public static List<Token> tokens = new ArrayList<Token>(); //List of tokens
+	private List<Token> tokens = new ArrayList<Token>(); //List of tokens
+	private List<Token> tFinal = new ArrayList<Token>(); //List of final tokens
+	private InputStream is;
 	
-	
-	public static void parseWord(String t){			
+	public void parseWord(String t){			
 		
 		/*
 		 * 
@@ -43,7 +45,7 @@ public class MainClass {
 		}			
 	}
 	
-	public static void sQuoteCheck(String a, String p, Boolean b){
+	public void sQuoteCheck(String a, String p, Boolean b){
 		
 		/*
 		 * 
@@ -84,15 +86,13 @@ public class MainClass {
 				parseWord(a);
 				tokens.add(new Token(p,false,true));
 			}			
-		}		
-	}	
-
-	public MainClass() throws IOException{
+		}
+	}
+	
+	public void processList() throws IOException{
 		
-		ClassLoader classLoader  = getClass().getClassLoader(); 				//Load class
-		File file 				 = new File(classLoader.getResource("resources/nlp_data.txt").getFile()); //Get file resource
-		FileReader fr 			 = new FileReader(file);						//Read file contents into string
-		BufferedReader br 		 = new BufferedReader(fr); 						//Buffer contents		
+		Reader r				 = new InputStreamReader(is);					//Read InputStream passed from ZIP file
+		BufferedReader br		 = new BufferedReader(r);						//Buffer InputStream
 		StreamTokenizer tokenize = new StreamTokenizer(br); 					//Tokenize using StreamTokenizer
 		Pattern allPunc 	     = Pattern.compile("(?!\\.)(?!\\-)\\p{Punct}");	//Regex expresstion for all punctuation except . and - as one character
 		Pattern allAlnum 		 = Pattern.compile("[\\p{Alnum}'.-]{1,}");		//Regex expresstion for all alphanumerics, \. \- and \' as one range
@@ -117,72 +117,86 @@ public class MainClass {
 		tokenize.whitespaceChars(0x00, 0x20);
 
 		//Loop through entire file and search for tokens
-		while(tokenize.nextToken() != StreamTokenizer.TT_EOF){
 
-			//Only take action on words
-		    if(tokenize.ttype == StreamTokenizer.TT_WORD) {
-			
-				//Apply regex to token
-				ap.reset(tokenize.sval);
-				aa.reset(tokenize.sval);
+		try {
+			while(tokenize.nextToken() != StreamTokenizer.TT_EOF){
 
-				//Loop through word
-				while(aa.find()){
-					ap.find();
-					
-					/* 
-					 * 
-					 * Set a flag if there is no punctuation in the stream
-					 * so that the code will continue to run. Since StreamTokenizer
-					 * will only pass valid streams to this section,we do not need 
-					 * to perform this check for alphas.
-					 * 
-					 * In the case that there are single quotes in the stream, 
-					 * sQuoteCheck is called to strip them out of the word if
-					 * they are not contractions. Otherwise, a straight call to
-					 * parseWord() is issued.
-					 * 
-					 */
-					
-					try {
-						ap.start();
-						noPunc = false;
+				//Only take action on words
+			    if(tokenize.ttype == StreamTokenizer.TT_WORD) {
+				
+					//Apply regex to token
+					ap.reset(tokenize.sval);
+					aa.reset(tokenize.sval);
+
+					//Loop through word
+					while(aa.find()){
+						ap.find();
+						
+						/* 
+						 * 
+						 * Set a flag if there is no punctuation in the stream
+						 * so that the code will continue to run. Since StreamTokenizer
+						 * will only pass valid streams to this section,we do not need 
+						 * to perform this check for alphas.
+						 * 
+						 * In the case that there are single quotes in the stream, 
+						 * sQuoteCheck is called to strip them out of the word if
+						 * they are not contractions. Otherwise, a straight call to
+						 * parseWord() is issued.
+						 * 
+						 */
+						
+						try {
+							ap.start();
+							noPunc = false;
+						}
+						
+						catch (IllegalStateException e){
+							noPunc = true;
+						}
+						
+						if(noPunc){
+							parseWord(aa.group());
+													
+						} else{
+							//Check if the first character is punctuation
+							if(aa.start() > ap.start())	{pFirst = true;	} 
+							else 						{pFirst = false;}
+							sQuoteCheck(aa.group(), ap.group(), pFirst);						
+						}
 					}
-					
-					catch (IllegalStateException e){
-						noPunc = true;
-					}
-					
-					if(noPunc){
-						parseWord(aa.group());
-												
-					} else{
-						//Check if the first character is punctuation
-						if(aa.start() > ap.start())	{pFirst = true;	} 
-						else 						{pFirst = false;}
-						sQuoteCheck(aa.group(), ap.group(), pFirst);						
-					}
-				}
-		    }		    
-		}		
-		fr.close();
+			    }		    
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public Tokenizer(InputStream rCons) throws IOException{
+		
+		/*
+		 * 
+		 * Because of the requirement of parallelization,
+		 * the classes in MainClass were renamed and shifted
+		 * a bit to make them compatible with Callable. The
+		 * constructor was modified to take an InputStream 
+		 * and pass that to tokenization method rather than
+		 * opening a file directly. 
+		 * 
+		 * It then calls EntityComparison and accepts its
+		 * return value as the final list of tokens, which
+		 * gets further processed in ThreadPool.java
+		 * 
+		 */
+		
+		is = rCons;
+		processList();		
+		EntityComparison e = new EntityComparison();
+		tFinal = e.CompareEntity(tokens);		
 	}
 	
-	public static void main(String[] args) throws IOException{
-		
-		MainClass main = new MainClass();
-		EntityComparison e = new EntityComparison();
-		e.CompareEntity(tokens);		
-		for(Token b: e.tFinal){
-			if(b.i > 0){
-				System.out.println("Named Entity  : " + b.nEnt);
-				System.out.println("Token Value   : " + b.tData);			
-				System.out.println("Token Index   : " + b.index);
-				System.out.println("Token Position: " + b.i);
-				System.out.println("------------------------");
-			}
-		}
-		System.out.println();
-		CreateXML xml = new CreateXML(e.tFinal);
+	@Override
+	public List<Token> call() throws Exception {
+		return tFinal;	
 	}
 }

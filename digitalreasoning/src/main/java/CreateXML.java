@@ -1,15 +1,12 @@
 package main.java;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.OutputKeys;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactory;
+import javax.xml.parsers.*;
+import javax.xml.transform.*;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
@@ -18,7 +15,7 @@ import org.w3c.dom.Element;
 
 public class CreateXML {
 
-	public CreateXML(List<Token> t){
+	public CreateXML(List<Token> t, List<Token> nelt){
 		
 		try{
 			String poa    =    ""; //Punctuation or Alpha
@@ -89,12 +86,48 @@ public class CreateXML {
 				
 				//If this node matches a named identity, set attributes
 				if(i.i > 0){
-					data.setAttribute("namedentity", "true");
+					data.setAttribute("named", "true");
 					data.setAttribute("position", Integer.toString(i.i));
 					data.setAttribute("value", i.nEnt);
 				}				
 				token.appendChild(data);
 				
+			}
+			
+			//Create namedentity parent node
+			Element namedentities = doc.createElement("namedentities");
+			NLP.appendChild(namedentities);
+			
+			String sIndex = ""; //Used to transform index values below
+			List<String> sList = new ArrayList<String>();
+			
+			for(Token ne: nelt){
+				
+				//Add entity parent and set occurrences attribute
+				Element entity = doc.createElement("entity");
+				namedentities.appendChild(entity);
+
+				//Add text value of named entity and set occurrences attribute
+				Element value = doc.createElement("value");
+				value.appendChild(doc.createTextNode(ne.tData));
+				value.setAttribute("occurrences", Integer.toString(ne.i));
+				entity.appendChild(value);
+				
+				//Logic to separate index values
+				sIndex = ne.nEnt;
+				sIndex = sIndex.replaceAll("[^-?0-9]+", " ");
+				sList.addAll(Arrays.asList(sIndex.trim().split(" ")));
+				
+				//Loop through values and add indexes
+				for(String s: sList){					
+					Element index = doc.createElement("index");
+					index.appendChild(doc.createTextNode(s));
+					entity.appendChild(index);
+				}
+				
+				//Clear values for next iteration
+				sIndex = "";
+				sList.clear();				
 			}
 			
 			//Create XML
